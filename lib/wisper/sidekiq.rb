@@ -11,8 +11,12 @@ module Wisper
       @options = options == true ? {} : options
     end
 
-    def broadcast(subscriber, publisher, event, args)
-      subscriber.delay(options).public_send(event, *args)
+    def broadcast(subscriber, _publisher, event, args)
+      BroadcastJob.perform_async(
+        'subscriber' => subscriber.name,
+        'event' => event,
+        'args' => args
+      )
     end
 
     def self.register

@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'wisper/sidekiq/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "wisper-sidekiq"
+  spec.name          = "wisper-sidekiq7"
   spec.version       = Wisper::Sidekiq::VERSION
   spec.authors       = ["Kris Leech"]
   spec.email         = ["kris.leech@gmail.com"]
   spec.summary       = 'Async publishing for Wisper using Sidekiq'
   spec.description   = 'Async publishing for Wisper using Sidekiq'
-  spec.homepage      = "https://github.com/krisleech/wisper-sidekiq"
+  spec.homepage      = "https://github.com/rrrodrigo/wisper-sidekiq7"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
